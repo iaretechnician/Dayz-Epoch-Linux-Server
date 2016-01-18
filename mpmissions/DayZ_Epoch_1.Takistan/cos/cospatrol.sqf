@@ -14,7 +14,7 @@ _group setSpeedMode "LIMITED";
 
 	_EHkilledIdx = (leader _group) addEventHandler ["FiredNear", {_this call breakPatrol_FNC;}];
 	
-_shuffleWaypoints=_waypoints call BIS_fnc_arrayShuffle;	
+_shuffleWaypoints=_waypoints call KK_fnc_arrayShuffle;	
 	for "_i" from 0 to _findWps do {
 		_wp=_shuffleWaypoints select _i;
 		_wp = _group addWaypoint [_wp, 0];

@@ -12,10 +12,26 @@
  To get Array of COS markers use _allMarkers=SERVER getvariable "COSmarkers";
 */
 
+
 if (isnil "SERVER") then {Hint "You must ADD a object named SERVER";Player Sidechat "You must ADD a object named SERVER";}else{
 if (isServer) then {
 IF (!isnil ("COScomplete")) then {Hint "Check your call. COS was called twice!";}else{
 
+
+KK_fnc_arrayShuffle = {
+    private ["_cnt","_el1","_indx","_el2"];
+    _cnt = count _this - 1;
+    _el1 = _this select _cnt;
+    _this resize _cnt;
+    for "_i" from 0 to _cnt + random 1 do {
+        _indx = floor random _cnt;
+        _el2 = _this select _indx;
+        _this set [_indx, _el1];
+        _el1 = _el2;
+    };
+    _this set [_cnt, _el1];
+    _this
+};
 COS_distance=1000;//Set spawn distance
 _aerielActivation=true;// Set if flying units can activate civilian Zones
 
@@ -145,7 +161,7 @@ _randomisation=10;
 // Sort a position for each civilian
 _roadPosArray = [];
 _roadPosArray resize _minPositions;
-_roadlist=_roadlist call BIS_fnc_arrayShuffle;
+_roadlist=_roadlist call KK_fnc_arrayShuffle;
 
  for "_n" from 0 to _minPositions do
 		{

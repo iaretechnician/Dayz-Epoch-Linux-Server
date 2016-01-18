@@ -48,9 +48,9 @@ _vehicleArray=[];
 _PatrolVehArray=[];
 _ParkedArray=[];
 
-_roadPosArray=_roadPosArray call BIS_fnc_arrayShuffle;	
-_UnitList=COScivPool call BIS_fnc_arrayShuffle;	
-_vehList=COSmotPool call BIS_fnc_arrayShuffle;
+_roadPosArray=_roadPosArray call KK_fnc_arrayShuffle;	
+_UnitList=COScivPool call KK_fnc_arrayShuffle;	
+_vehList=COSmotPool call KK_fnc_arrayShuffle;
 _countVehPool=count _vehList;
 _countPool=count _UnitList;
 _v=0;
