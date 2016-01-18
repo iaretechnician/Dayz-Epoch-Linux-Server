@@ -1,0 +1,2 @@
+./steamcmd/steamcmd.sh +runscript ./update-arma-2.txt
+

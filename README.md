@@ -22,6 +22,7 @@ Installation instructions
    > quit
    </pre>
    Download and install DayZ Epoch Mod 1.0.5.1 (http://goo.gl/IN1Pt1).
+   Current arma2 server can be downloaded from https://community.bistudio.com/wiki/Arma_Dedicated_Server#Downloads
 
 4. Run ./install<br>
    Watch the messages - they might inform you whether your installation

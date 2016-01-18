@@ -1,0 +1,23 @@
+// Stop the script if any commands fail
+@ShutdownOnFailedCommand 1
+
+// Do not prompt for a password, use the one specified in the login command
+@NoPromptForPassword 1
+
+// force it to believe were in windows
+@sSteamCmdForcePlatformType windows
+
+// Login to the given steam account
+login USERNAME PASSWORD
+
+// Set the directory where A2 is/will be installed
+force_install_dir /home/arma
+
+// Install or update the files for App ID
+// arma2 (notice that 33900 app_id does NOT work!)
+app_update 33900 validate
+// arma2 Operation Arrowhead
+app_update 33930 validate
+
+// Exit the Steam shell
+quit
